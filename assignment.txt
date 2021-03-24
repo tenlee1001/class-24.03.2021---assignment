@@ -17,8 +17,6 @@ def draw():
         else:
             pass
     
-    print(mouseX, mouseY)
-    
     s = createShape()
     s.beginShape()
     s.fill(245, 222, 109) #F5DE6D - kolor żółty
