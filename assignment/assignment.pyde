@@ -1,21 +1,24 @@
 def setup():
     size(600, 700)
     textSize(70)
+    global violet, dark_violet, pink # w tensposób jest czytelniej bez komentarzy - kod sam się komentuje :)
+    violet = "#EC98F2"
+    dark_violet = "#671EB7"
+    pink = "#FF29D8"
     
 def draw():
     clear()
-    background("#EC98F2")  # kolor fioletowy
-    fill("#671EB7")  # ciemny fiolet
+    
+    background(violet)  # jw.
+    fill(dark_violet)
     
     text('LM', width/7, height/5)
     
     # zmiana koloru inicjałów po nacisnięciu jednego z przycisków
     if keyPressed:
-        if key == 'l' or key == 'm':
-            fill("#FF29D8")  # różowy
+        if key == 'l' or key == 'm' or key == 'L' or key == 'M':
+            fill(pink)
             text('LM', width/7, height/5)
-        else:
-            pass
     
     s = createShape()
     s.beginShape()
@@ -42,11 +45,9 @@ def draw():
     s2.endShape(CLOSE)
     shape(s2, 0, 0)
     
-
-    
     # zmiana koloru inicjałów po najechaniu na kształt
     if hex(get(mouseX, mouseY)) == 'FFF5DE6D':  # kolor żółty
         fill(245, 222, 109)
         text('LM', width/7, height/5)
         
-    
+    #2pkt
